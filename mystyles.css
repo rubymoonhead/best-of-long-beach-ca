@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+/* WARM CITY LIGHT TONES */
+/* #eab394 - Gold Sand
+	#f6e3d2 - Albescent White
+	#b09b98 - Del Rio
+	#272729 - Shark
+	#4e3634 - Rock */
+
+* {
+	/* Outline to view layout on screen while styling | Remove after styling */
+	/* outline: 0.0625rem dotted #ee4b2b; */
+
+	/* include rules for specific web page below this line */
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* BODY */
+body {
+	font-family: "Amatic SC", cursive;
+	color: #272729; /*Shark*/
+	background-color: #f6e3d2; /*Albescent White*/
+}
+
+/* FIXED NAVIGATION BAR */
+.navmenu {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	justify-content: space-between;
+	height: 3.125em;
+	line-height: 3.125em;
+	background-color: #4e3634; /*Rock*/
+	z-index: 2;
+}
+.navmenu .lab-activity a {
+	font-family: "Josefin Sans", sans-serif;
+	color: #f6e3d2; /*Albescent White*/
+	text-decoration: none;
+	font-size: 1.875em;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 1.75em;
+}
+.navmenu .lab-activity:hover a {
+	color: #eab394; /*Gold Sand*/
+}
+.navmenu ol {
+	display: flex;
+	list-style: none;
+}
+.navmenu ol li {
+	display: block;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 1.25rem;
+}
+.navmenu ol li a {
+	color: #f6e3d2; /*Albescent White*/
+	text-decoration: none;
+	display: block;
+	padding: 0 1.875em;
+	transition: 0.2s ease;
+}
+.navmenu ol li:hover a {
+	color: #272729; /*Shark*/
+	background-color: #eab394; /*Gold Sand*/
+}
+
+/* THE MAIN PART */
+
+/* headings | footer */
+h1,
+h2,
+h3,
+footer {
+	font-family: "Josefin Sans", sans-serif;
+}
+.footer-part {
+	text-align: center;
+	font-size: 1.25rem;
+	height: 3.125em;
+	line-height: 3.125em;
+	color: #f6e3d2; /*Albescent White*/
+	background-color: #4e3634; /*Rock*/
+}
+
+/* Home */
+.page {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.page .text {
+	position: relative;
+	z-index: 1;
+	font-size: 2.25rem;
+	font-weight: 800;
+	color: #eab394; /*Gold Sand*/
+}
+.page .text .best {
+	font-family: "Josefin Sans", sans-serif;
+}
+.page .image {
+	position: absolute;
+	background: url(https://wallpaperbat.com/img/249684-wallpaper-long-beach-ca.jpg);
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	filter: brightness(40%);
+}
+
+/* Things to do | Restaurants | Lodging | Credits */
+.part {
+	position: relative;
+	min-height: 100vh;
+	padding: 2em 0;
+	width: 100%;
+}
+.part h2 {
+	font-size: 2.5rem;
+	margin: 1em 1em;
+	position: relative;
+}
+.part p {
+	font-size: 2rem;
+	margin-right: 3em;
+	margin-bottom: 2em;
+	margin-left: 3em;
+	text-align: justify;
+}
+.credits-part {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+.credits-part p {
+	font-family: "Varela Round", sans-serif;
+}
+.credits-part p .credit-link {
+	margin-left: 1em;
+	color: #272729; /*Shark*/
+	text-decoration: none;
+}
+.credits-part p .credit-link:hover {
+	color: #f6e3d2; /*Albescent White*/
+	background-color: #b09b98; /*Del Rio*/
+}
+.credits-part p .credit-link:active {
+	color: #b09b98; /*Del Rio*/
+	background-color: #4e3634; /*Rock*/
+}
+.part:nth-child(even) {
+	color: #f6e3d2; /*Albescent White*/
+	background: #272729; /*Shark*/
+}
+
+/* The Cards */
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.card-container section {
+	flex-basis: 30%;
+	text-align: center;
+	background: linear-gradient(
+		to bottom,
+		#f6e3d2 0%,
+		#eab394 9%,
+		#b09b98 18%,
+		#272729 100%
+	);
+	min-width: 15em;
+	margin-bottom: 2em;
+	border-radius: 0.25em;
+	color: #272729; /*Shark*/
+	cursor: pointer;
+	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 1);
+	transition: 0.3s;
+}
+.card-container section:hover {
+	box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 1);
+}
+.card-container section .card-link a {
+	text-decoration: none;
+	color: #f6e3d2; /*Albescent White*/
+}
+.card-container section .card-link a:hover {
+	color: #eab394; /*Gold Sand*/
+}
+.card-container section .card-link a:active {
+	color: #b09b98; /*Del Rio*/
+}
+.card-container section img {
+	max-width: 100%;
+	height: auto;
+}
+.card-container section h3 {
+	font-size: 1.75rem;
+	/* 	text-transform: uppercase; */
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin: 0 0.25em;
+}
+.card-container section p {
+	color: #f6e3d2; /*Albescent White*/
+	padding: 0.5em;
+	margin: auto;
+}
