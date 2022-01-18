@@ -2,7 +2,7 @@
 /* CSS Reset */
 * {
 	/* Outline to view layout on screen while styling | Remove after styling */
-	outline: 0.0625em dashed #ff0075;
+	/* outline: 0.0625em dashed #ff0075; */
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
@@ -134,7 +134,7 @@ body {
 	filter: brightness(40%);
 }
 
-/* things to do | restaurants | lodging | credits */
+/* things to do | restaurants | lodging */
 .part {
 	position: relative;
 	min-height: 100vh;
@@ -152,37 +152,29 @@ body {
 	margin: 0 3em 2em 3em;
 	text-align: justify;
 }
+/* credits */
 .credits-part {
-	margin: 1em 0 1em 1em;
+	padding: 1em;
+	line-height: 1.6;
 }
 .credits-part p {
 	font-family: "Varela Round", sans-serif;
 }
 .credits-part p .credit-link {
 	margin-left: 1em;
-	color: var(--shark);
-	text-decoration: none;
+	color: var(--albescentwhite);
 }
 .credits-part p .credit-link:hover {
-	color: var(--albescentwhite);
-	background-color: var(--delrio);
-}
-.credits-part p .credit-link:active {
-	color: var(--delrio);
-	background-color: var(--rock);
-}
-.part:nth-child(even) {
-	color: var(--albescentwhite);
-	background: var(--shark);
+	color: var(--goldsand);
 }
 
-/* The Cards */
-.card-container {
+/* styles for the cards */
+.part .card-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
-.card-container section {
+.part .card-container article {
 	flex-basis: 30%;
 	text-align: center;
 	background: linear-gradient(
@@ -198,35 +190,31 @@ body {
 	color: var(--shark);
 	cursor: pointer;
 	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 1);
-	transition: 0.3s;
+	transition: 0.4s;
 }
-.card-container section:hover {
+.part .card-container article:hover {
 	box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 1);
 }
-.card-container section .card-link a {
+.part .card-container article .card-link a {
 	color: var(--albescentwhite);
 }
-.card-container section .card-link a:hover {
+.part .card-container article .card-link a:hover {
 	color: var(--goldsand);
 }
-.card-container section .card-link a:active {
-	color: var(--delrio);
-}
-.card-container section img {
+.part .card-container article img {
 	max-width: 100%;
 	height: auto;
 }
-.card-container section h3 {
-	font-size: 1.75rem;
-	/* 	text-transform: uppercase; */
+.part .card-container article .card-link {
+	font-size: 1.5rem;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	margin: 0 0.25em;
 }
-.card-container section p {
+.part .card-container article p {
 	color: var(--albescentwhite);
-	padding: 0.5em;
-	margin: auto;
+	padding: 1em;
+	text-align: justify;
 }
 
 /* footer */
