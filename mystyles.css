@@ -26,6 +26,13 @@ li {
 a {
 	text-decoration: none;
 }
+/* headings and footer */
+h1,
+h2,
+h3,
+footer {
+	font-family: "Josefin Sans", sans-serif;
+}
 
 /* declaring variables for colors */
 /* warm city light tones */
@@ -41,7 +48,7 @@ a {
 body {
 	max-width: 75%;
 	margin: 0 auto;
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Lato', sans-serif;
 	color: var(--albescentwhite);
 	background-color: var(--shark);
 }
@@ -53,7 +60,7 @@ body {
 	width: 100%;
 	max-width: 75%;
 	justify-content: space-between;
-	height: 3.125em;
+	padding: .5em 0;
 	line-height: 3.125em;
 	background-color: var(--rock);
 	z-index: 2;
@@ -65,7 +72,7 @@ body {
 	font-size: 1.875em;
 	font-weight: bold;
 	cursor: pointer;
-	margin-left: 1.75em;
+	margin-left: 1em;
 	transition: 0.4s ease;
 }
 /* logo hover */
@@ -89,27 +96,10 @@ body {
 }
 /* nav links hover */
 .navmenu ol li a:hover {
-	color: var(--shark);
-	background-color: var(--goldsand);
+	color: var(--goldsand);
 }
 
 /* the main part */
-
-/* headings | footer */
-h1,
-h2,
-h3,
-footer {
-	font-family: "Josefin Sans", sans-serif;
-}
-.footer-part {
-	text-align: center;
-	font-size: 1.25rem;
-	height: 3.125em;
-	line-height: 3.125em;
-	color: var(--albescentwhite);
-	background-color: var(--rock);
-}
 
 /* Home */
 .page {
@@ -121,14 +111,18 @@ footer {
 	width: 100%;
 }
 .page .text {
+	padding: 0 2em;
 	position: relative;
 	z-index: 1;
-	font-size: 2.25rem;
-	font-weight: 800;
+	font-size: 2rem;
 	color: var(--goldsand);
 }
 .page .text .best {
 	font-family: "Josefin Sans", sans-serif;
+	padding-bottom: .25em;
+}
+.page .text .home-desc {
+	padding-top: .25em;
 }
 .page .image {
 	position: absolute;
@@ -140,29 +134,26 @@ footer {
 	filter: brightness(40%);
 }
 
-/* Things to do | Restaurants | Lodging | Credits */
+/* things to do | restaurants | lodging | credits */
 .part {
 	position: relative;
 	min-height: 100vh;
-	padding: 2em 0;
+	padding: 5em 0;
 	width: 100%;
 }
 .part h2 {
-	font-size: 2.5rem;
+	font-size: 2.25rem;
 	margin: 1em 1em;
 	position: relative;
 }
-.part p {
-	font-size: 2rem;
-	margin-right: 3em;
-	margin-bottom: 2em;
-	margin-left: 3em;
+.part .part-desc {
+	font-size: 1.25rem;
+	line-height: 1.6;
+	margin: 0 3em 2em 3em;
 	text-align: justify;
 }
 .credits-part {
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left: 1em;
+	margin: 1em 0 1em 1em;
 }
 .credits-part p {
 	font-family: "Varela Round", sans-serif;
@@ -236,4 +227,13 @@ footer {
 	color: var(--albescentwhite);
 	padding: 0.5em;
 	margin: auto;
+}
+
+/* footer */
+.footer-part {
+	text-align: center;
+	font-size: 1.25rem;
+	padding: 1em 0;
+	color: var(--albescentwhite);
+	background-color: var(--rock);
 }
