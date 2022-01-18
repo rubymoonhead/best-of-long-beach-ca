@@ -1,67 +1,80 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
-
-/* WARM CITY LIGHT TONES */
-/* #eab394 - Gold Sand
-	#f6e3d2 - Albescent White
-	#b09b98 - Del Rio
-	#272729 - Shark
-	#4e3634 - Rock */
-
+/* MY TEMPLATE */
+/* CSS Reset */
 * {
 	/* Outline to view layout on screen while styling | Remove after styling */
-	/* outline: 0.0625rem dotted #ee4b2b; */
-
-	/* include rules for specific web page below this line */
+	outline: 0.0625em dashed #ff0075;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
 }
 
-html {
-	box-sizing: border-box;
-	font-size: 100%;
-}
 *,
 *:before,
 *:after {
 	box-sizing: inherit;
 }
 
-/* BODY */
-body {
-	font-family: "Amatic SC", cursive;
-	color: #272729; /*Shark*/
-	background-color: #f6e3d2; /*Albescent White*/
+html {
+	box-sizing: border-box;
+	font-size: 100%;
 }
 
-/* FIXED NAVIGATION BAR */
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* declaring variables for colors */
+/* warm city light tones */
+:root {
+	--goldsand: #eab394;
+	--albescentwhite: #f6e3d2;
+	--delrio: #b09b98;
+	--shark: #272729;
+	--rock: #4e3634;
+}
+
+/* body */
+body {
+	max-width: 75%;
+	margin: 0 auto;
+	font-family: 'Amatic SC', cursive;
+	color: var(--albescentwhite);
+	background-color: var(--shark);
+}
+
+/* fixed navigation bar */
 .navmenu {
 	display: flex;
 	position: fixed;
 	width: 100%;
+	max-width: 75%;
 	justify-content: space-between;
 	height: 3.125em;
 	line-height: 3.125em;
-	background-color: #4e3634; /*Rock*/
+	background-color: var(--rock);
 	z-index: 2;
 }
+/* logo */
 .navmenu .lab-activity a {
-	font-family: "Josefin Sans", sans-serif;
-	color: #f6e3d2; /*Albescent White*/
-	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+	color: var(--albescentwhite);
 	font-size: 1.875em;
 	font-weight: bold;
 	cursor: pointer;
 	margin-left: 1.75em;
+	transition: 0.4s ease;
 }
-.navmenu .lab-activity:hover a {
-	color: #eab394; /*Gold Sand*/
+/* logo hover */
+.navmenu .lab-activity a:hover {
+	color: var(--goldsand);
 }
+/* nav links */
 .navmenu ol {
 	display: flex;
-	list-style: none;
 }
 .navmenu ol li {
 	display: block;
@@ -69,18 +82,18 @@ body {
 	font-size: 1.25rem;
 }
 .navmenu ol li a {
-	color: #f6e3d2; /*Albescent White*/
-	text-decoration: none;
+	color: var(--albescentwhite);
 	display: block;
 	padding: 0 1.875em;
-	transition: 0.2s ease;
+	transition: 0.4s ease;
 }
-.navmenu ol li:hover a {
-	color: #272729; /*Shark*/
-	background-color: #eab394; /*Gold Sand*/
+/* nav links hover */
+.navmenu ol li a:hover {
+	color: var(--shark);
+	background-color: var(--goldsand);
 }
 
-/* THE MAIN PART */
+/* the main part */
 
 /* headings | footer */
 h1,
@@ -94,8 +107,8 @@ footer {
 	font-size: 1.25rem;
 	height: 3.125em;
 	line-height: 3.125em;
-	color: #f6e3d2; /*Albescent White*/
-	background-color: #4e3634; /*Rock*/
+	color: var(--albescentwhite);
+	background-color: var(--rock);
 }
 
 /* Home */
@@ -112,7 +125,7 @@ footer {
 	z-index: 1;
 	font-size: 2.25rem;
 	font-weight: 800;
-	color: #eab394; /*Gold Sand*/
+	color: var(--goldsand);
 }
 .page .text .best {
 	font-family: "Josefin Sans", sans-serif;
@@ -156,20 +169,20 @@ footer {
 }
 .credits-part p .credit-link {
 	margin-left: 1em;
-	color: #272729; /*Shark*/
+	color: var(--shark);
 	text-decoration: none;
 }
 .credits-part p .credit-link:hover {
-	color: #f6e3d2; /*Albescent White*/
-	background-color: #b09b98; /*Del Rio*/
+	color: var(--albescentwhite);
+	background-color: var(--delrio);
 }
 .credits-part p .credit-link:active {
-	color: #b09b98; /*Del Rio*/
-	background-color: #4e3634; /*Rock*/
+	color: var(--delrio);
+	background-color: var(--rock);
 }
 .part:nth-child(even) {
-	color: #f6e3d2; /*Albescent White*/
-	background: #272729; /*Shark*/
+	color: var(--albescentwhite);
+	background: var(--shark);
 }
 
 /* The Cards */
@@ -183,15 +196,15 @@ footer {
 	text-align: center;
 	background: linear-gradient(
 		to bottom,
-		#f6e3d2 0%,
-		#eab394 9%,
-		#b09b98 18%,
-		#272729 100%
+		var(--albescentwhite) 0%,
+		var(--goldsand) 9%,
+		var(--delrio) 18%,
+		var(--shark) 100%
 	);
 	min-width: 15em;
 	margin-bottom: 2em;
 	border-radius: 0.25em;
-	color: #272729; /*Shark*/
+	color: var(--shark);
 	cursor: pointer;
 	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 1);
 	transition: 0.3s;
@@ -200,14 +213,13 @@ footer {
 	box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 1);
 }
 .card-container section .card-link a {
-	text-decoration: none;
-	color: #f6e3d2; /*Albescent White*/
+	color: var(--albescentwhite);
 }
 .card-container section .card-link a:hover {
-	color: #eab394; /*Gold Sand*/
+	color: var(--goldsand);
 }
 .card-container section .card-link a:active {
-	color: #b09b98; /*Del Rio*/
+	color: var(--delrio);
 }
 .card-container section img {
 	max-width: 100%;
@@ -221,7 +233,7 @@ footer {
 	margin: 0 0.25em;
 }
 .card-container section p {
-	color: #f6e3d2; /*Albescent White*/
+	color: var(--albescentwhite);
 	padding: 0.5em;
 	margin: auto;
 }
