@@ -2,7 +2,7 @@
 /* CSS Reset */
 * {
 	/* Outline to view layout on screen while styling | Remove after styling */
-	/* outline: 0.0625em dashed #ff0075; */
+	outline: 0.0625em dashed #ff0075;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
@@ -48,7 +48,7 @@ footer {
 body {
 	max-width: 75%;
 	margin: 0 auto;
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	color: var(--albescentwhite);
 	background-color: var(--shark);
 }
@@ -60,14 +60,14 @@ body {
 	width: 100%;
 	max-width: 75%;
 	justify-content: space-between;
-	padding: .5em 0;
+	padding: 0.5em 0;
 	line-height: 3.125em;
 	background-color: var(--rock);
 	z-index: 2;
 }
 /* logo */
 .navmenu .lab-activity a {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	color: var(--albescentwhite);
 	font-size: 1.875em;
 	font-weight: bold;
@@ -119,10 +119,10 @@ body {
 }
 .page .text .best {
 	font-family: "Josefin Sans", sans-serif;
-	padding-bottom: .25em;
+	padding-bottom: 0.25em;
 }
 .page .text .home-desc {
-	padding-top: .25em;
+	padding-top: 0.25em;
 }
 .page .image {
 	position: absolute;
@@ -224,4 +224,194 @@ body {
 	padding: 1em 0;
 	color: var(--albescentwhite);
 	background-color: var(--rock);
+}
+
+/* Tablet styles */
+/* max-width 768px */
+@media screen and (max-width: 768px) {
+	/* body */
+	body {
+		max-width: none;
+		/* margin: 0 auto; */
+		/* font-family: "Lato", sans-serif; */
+		/* color: var(--albescentwhite); */
+		/* background-color: var(--shark); */
+	}
+	/* fixed navigation bar */
+	.navmenu {
+		/* display: flex; */
+		/* position: fixed; */
+		/* width: 100%; */
+		max-width: none;
+		justify-content: flex-start;
+		/* padding: 0.5em 0; */
+		line-height: 1.25em;
+		/* background-color: var(--rock); */
+		/* z-index: 2; */
+	}
+	/* logo */
+	.navmenu .lab-activity a {
+		/* font-family: "Josefin Sans", sans-serif; */
+		/* color: var(--albescentwhite); */
+		font-size: initial;
+		/* font-weight: bold; */
+		/* cursor: pointer; */
+		/* margin-left: 1em; */
+		/* transition: 0.4s ease; */
+	}
+	/* logo hover */
+	/* .navmenu .lab-activity a:hover {
+		color: var(--goldsand);
+	} */
+	/* nav links */
+	/* .navmenu ol {
+		display: flex;
+	} */
+	.navmenu ol li {
+		display: inline;
+		/* font-family: "Josefin Sans", sans-serif; */
+		font-size: initial;
+	}
+	.navmenu ol li a {
+		/* color: var(--albescentwhite); */
+		/* display: block; */
+		padding: 0 1.5em;
+		/* transition: 0.4s ease; */
+	}
+	/* nav links hover */
+	/* .navmenu ol li a:hover {
+		color: var(--goldsand);
+	} */
+
+	/* the main part */
+
+	/* Home */
+	/* .page {
+		position: relative;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	} */
+	.page .text {
+		padding: 0 1em;
+		/* position: relative; */
+		/* z-index: 1; */
+		font-size: 1.75rem;
+		/* color: var(--goldsand); */
+	}
+	/* .page .text .best {
+		font-family: "Josefin Sans", sans-serif;
+		padding-bottom: 0.25em;
+	} */
+	/* .page .text .home-desc {
+		padding-top: 0.25em;
+	} */
+	/* .page .image {
+		position: absolute;
+		background: url(https://wallpaperbat.com/img/249684-wallpaper-long-beach-ca.jpg);
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		filter: brightness(40%);
+	} */
+
+	/* things to do | restaurants | lodging */
+	.part {
+		/* position: relative; */
+		/* min-height: 100vh; */
+		padding: 2em 0;
+		/* width: 100%; */
+	}
+	.part h2 {
+		font-size: 2rem;
+		margin: 1em .5em;
+		/* position: relative; */
+	}
+	.part .part-desc {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		margin: 0 2em 2em 2em;
+		/* text-align: justify; */
+	}
+	/* credits */
+	/* .credits-part {
+		padding: 1em;
+		line-height: 1.6;
+	} */
+	/* .credits-part p {
+		font-family: "Varela Round", sans-serif;
+	} */
+	/* .credits-part p .credit-link {
+		margin-left: 1em;
+		color: var(--albescentwhite);
+	} */
+	/* .credits-part p .credit-link:hover {
+		color: var(--goldsand);
+	} */
+
+	/* styles for the cards */
+	/* .part .card-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	} */
+	.part .card-container article {
+		flex-basis: 40%;
+		/* text-align: center; */
+		/* background: linear-gradient(
+			to bottom,
+			var(--albescentwhite) 0%,
+			var(--goldsand) 9%,
+			var(--delrio) 18%,
+			var(--shark) 100%
+		); */
+		/* min-width: 15em; */
+		/* margin-bottom: 2em; */
+		/* border-radius: 0.25em; */
+		/* color: var(--shark); */
+		/* cursor: pointer; */
+		/* box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 1); */
+		/* transition: 0.4s; */
+	}
+	/* .part .card-container article:hover {
+		box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 1);
+	} */
+	/* .part .card-container article .card-link a {
+		color: var(--albescentwhite);
+	} */
+	/* .part .card-container article .card-link a:hover {
+		color: var(--goldsand);
+	} */
+	/* .part .card-container article img {
+		max-width: 100%;
+		height: auto;
+	} */
+	.part .card-container article .card-link {
+		font-size: 1.25rem;
+		/* padding-top: 0.5em; */
+		/* padding-bottom: 0.5em; */
+		/* margin: 0 0.25em; */
+	}
+	/* .part .card-container article p {
+		color: var(--albescentwhite);
+		padding: 1em;
+		text-align: justify;
+	} */
+
+	/* footer */
+	.footer-part {
+		/* text-align: center; */
+		font-size: 1.15rem;
+		/* padding: 1em 0; */
+		/* color: var(--albescentwhite); */
+		/* background-color: var(--rock); */
+	}
+}
+
+/* Mobile styles */
+/* max-width 425px */
+@media screen and (max-width: 425px) {
 }
