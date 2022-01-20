@@ -26,6 +26,7 @@ li {
 a {
 	text-decoration: none;
 }
+
 /* headings and footer */
 h1,
 h2,
@@ -98,7 +99,18 @@ body {
 .navmenu ol li a:hover {
 	color: var(--goldsand);
 }
-
+/* hamburger styles */
+.navmenu .hamburger {
+	display: none;
+}
+.navmenu .hamburger .bar {
+	display: block;
+	width: 1.5em;
+	height: 0.25em;
+	margin: 0.25em auto;
+	transition: all 0.4s ease-in-out;
+	background-color: var(--albescentwhite);
+}
 /* the main part */
 
 /* Home */
@@ -252,6 +264,41 @@ body {
 	.navmenu ol li a {
 		padding: 0 1.5em;
 	}
+	/* hide the navbar-links */
+	header .navmenu .navbar-links {
+		position: fixed;
+		left: -100%;
+		top: 5em;
+		flex-direction: column;
+		background-color: var(--lightred);
+		width: 100%;
+		border-radius: 0.3em;
+		text-align: center;
+		transition: 0.4s;
+		box-shadow: 0.125em 0.125em 0.125em rgba(42, 39, 39, 0.4);
+	}
+	header .navmenu .navbar-links.active {
+		left: 0;
+	}
+	header .navmenu .navbar-links .links {
+		margin: 1em 0;
+	}
+	/* display hamburger */
+	header .navmenu .hamburger {
+		display: block;
+		cursor: pointer;
+	}
+	/* hamburger X animation */
+	header .navmenu .hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+	header .navmenu .hamburger.active .bar:nth-child(1) {
+		transform: translateY(0.5em) rotate(45deg);
+	}
+	header .navmenu .hamburger.active .bar:nth-child(3) {
+		transform: translateY(-0.5em) rotate(-45deg);
+	}
+
 	/* the main part */
 	.page .text {
 		padding: 0 1em;
