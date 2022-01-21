@@ -2,7 +2,7 @@
 /* CSS Reset */
 * {
 	/* Outline to view layout on screen while styling | Remove after styling */
-	outline: 0.0625em dashed #ff0075;
+	/* outline: 0.0625em dashed #ff0075; */
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
@@ -61,7 +61,7 @@ body {
 	width: 100%;
 	max-width: 75%;
 	justify-content: space-between;
-	padding: 0.5em 0;
+	padding: 0.5em 1em;
 	line-height: 3.125em;
 	background-color: var(--rock);
 	z-index: 2;
@@ -70,10 +70,9 @@ body {
 .navmenu .lab-activity a {
 	font-family: "Josefin Sans", sans-serif;
 	color: var(--albescentwhite);
-	font-size: 1.875em;
+	font-size: 1.875rem;
 	font-weight: bold;
 	cursor: pointer;
-	margin-left: 1em;
 	transition: 0.4s ease;
 }
 /* logo hover */
@@ -81,25 +80,25 @@ body {
 	color: var(--goldsand);
 }
 /* nav links */
-.navmenu ol {
+.navmenu .navbar-links {
 	display: flex;
 }
-.navmenu ol li {
+.navmenu .navbar-links li {
 	display: block;
 	font-family: "Josefin Sans", sans-serif;
 	font-size: 1.25rem;
 }
-.navmenu ol li a {
+.navmenu .navbar-links li .navlink {
 	color: var(--albescentwhite);
 	display: block;
 	padding: 0 1.875em;
 	transition: 0.4s ease;
 }
 /* nav links hover */
-.navmenu ol li a:hover {
+.navmenu .navbar-links li a:hover {
 	color: var(--goldsand);
 }
-/* hamburger styles */
+/* hamburger menu */
 .navmenu .hamburger {
 	display: none;
 }
@@ -111,8 +110,8 @@ body {
 	transition: all 0.4s ease-in-out;
 	background-color: var(--albescentwhite);
 }
-/* the main part */
 
+/* the main part */
 /* Home */
 .page {
 	position: relative;
@@ -216,12 +215,13 @@ body {
 .part .card-container article img {
 	max-width: 100%;
 	height: auto;
+	margin-bottom: 1em;
 }
 .part .card-container article .card-link {
 	font-size: 1.5rem;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	margin: 0 0.25em;
+	/* padding-top: 0.5em;
+	padding-bottom: 0.5em; */
+	/* margin: 0 0.25em; */
 }
 .part .card-container article p {
 	color: var(--albescentwhite);
@@ -245,65 +245,55 @@ body {
 	body {
 		max-width: none;
 	}
+
 	/* fixed navigation bar */
 	.navmenu {
 		max-width: none;
-		justify-content: flex-start;
-
-		line-height: 1.25em;
 	}
 	/* logo */
 	.navmenu .lab-activity a {
-		font-size: initial;
+		font-size: 1.5rem;
 	}
-	.navmenu ol li {
-		display: inline;
-
-		font-size: initial;
-	}
-	.navmenu ol li a {
-		padding: 0 1.5em;
-	}
+	/* nav links */
 	/* hide the navbar-links */
-	header .navmenu .navbar-links {
+	.navmenu .navbar-links {
 		position: fixed;
 		left: -100%;
-		top: 5em;
+		top: 4em;
 		flex-direction: column;
-		background-color: var(--lightred);
+		background-color: var(--rock);
 		width: 100%;
 		border-radius: 0.3em;
 		text-align: center;
 		transition: 0.4s;
 		box-shadow: 0.125em 0.125em 0.125em rgba(42, 39, 39, 0.4);
 	}
-	header .navmenu .navbar-links.active {
+	.navmenu .navbar-links.active {
 		left: 0;
 	}
-	header .navmenu .navbar-links .links {
-		margin: 1em 0;
-	}
 	/* display hamburger */
-	header .navmenu .hamburger {
+	.navmenu .hamburger {
 		display: block;
 		cursor: pointer;
 	}
 	/* hamburger X animation */
-	header .navmenu .hamburger.active .bar:nth-child(2) {
+	.navmenu .hamburger.active .bar:nth-child(2) {
 		opacity: 0;
 	}
-	header .navmenu .hamburger.active .bar:nth-child(1) {
+	.navmenu .hamburger.active .bar:nth-child(1) {
 		transform: translateY(0.5em) rotate(45deg);
 	}
-	header .navmenu .hamburger.active .bar:nth-child(3) {
+	.navmenu .hamburger.active .bar:nth-child(3) {
 		transform: translateY(-0.5em) rotate(-45deg);
 	}
 
 	/* the main part */
+	/* Home */
 	.page .text {
 		padding: 0 1em;
 		font-size: 1.75rem;
 	}
+
 	/* things to do | restaurants | lodging */
 	.part {
 		padding: 2em 0;
@@ -311,12 +301,13 @@ body {
 	.part h2 {
 		font-size: 2rem;
 		margin: 1em 0.5em;
+		padding-top: 1em;
 	}
 	.part .part-desc {
 		font-size: 1.15rem;
-		line-height: 1.6;
 		margin: 0 2em 2em 2em;
 	}
+
 	/* styles for the cards */
 	.part .card-container article {
 		flex-basis: 40%;
@@ -324,6 +315,7 @@ body {
 	.part .card-container article .card-link {
 		font-size: 1.25rem;
 	}
+
 	/* footer */
 	.footer-part {
 		font-size: 1.15rem;
@@ -333,20 +325,6 @@ body {
 /* Mobile styles */
 /* max-width 425px */
 @media screen and (max-width: 425px) {
-	/* fixed navigation bar */
-	.navmenu {
-		line-height: initial;
-	}
-	/* nav links */
-	.navmenu ol li a {
-		padding: 0 1em;
-	}
-	/* the main part */
-	/* Home */
-	.page .text {
-		padding: 0 0.5em;
-		font-size: 1.5rem;
-	}
 	/* things to do | restaurants | lodging */
 	.part h2 {
 		font-size: 1.75rem;
@@ -355,11 +333,9 @@ body {
 		font-size: initial;
 		margin: 0 1.25em 1.5em 1.25em;
 	}
+
 	/* styles for the cards */
 	.part .card-container article {
 		flex-basis: 80%;
-	}
-	.part .card-container article .card-link {
-		font-size: 1.25rem;
 	}
 }
