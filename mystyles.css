@@ -134,6 +134,7 @@ body {
 }
 .page .text .home-desc {
 	padding-top: 0.25em;
+	text-align: justify;
 }
 .page .image {
 	position: absolute;
