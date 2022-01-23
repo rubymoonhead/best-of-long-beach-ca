@@ -2,7 +2,7 @@
 /* CSS Reset */
 * {
 	/* Outline to view layout on screen while styling | Remove after styling */
-	/* outline: 0.0625em dashed #ff0075; */
+	outline: 0.0625em dashed #ff0075;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
@@ -164,11 +164,11 @@ body {
 	margin: 0 3em 2em 3em;
 	text-align: justify;
 }
-/* restaurants */
-.restaurants .part-desc a {
+/* restaurants | lodging */
+.restaurants .part-desc a, .lodging .part-desc a {
 	color: var(--albescentwhite);
 }
-.restaurants .part-desc a:hover {
+.restaurants .part-desc a:hover, .lodging .part-desc a:hover {
 	color: var(--goldsand);
 }
 
