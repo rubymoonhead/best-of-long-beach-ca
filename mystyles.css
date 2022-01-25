@@ -133,7 +133,8 @@ body {
 	font-family: "Josefin Sans", sans-serif;
 	padding-bottom: 0.25em;
 }
-.page .text .best, h1 {
+.page .text .best,
+h1 {
 	color: var(--aquamarine);
 }
 .page .text .home-desc {
@@ -150,6 +151,7 @@ body {
 	filter: brightness(40%);
 }
 
+/* part */
 /* things to do | restaurants | lodging */
 .part {
 	position: relative;
@@ -168,6 +170,7 @@ body {
 	margin: 0 3em 2em 3em;
 	text-align: justify;
 }
+/* links and links hover */
 /* restaurants | lodging */
 .restaurants .part-desc a,
 .lodging .part-desc a {
@@ -186,6 +189,7 @@ body {
 .credits-part p {
 	font-family: "Varela Round", sans-serif;
 }
+/* links and links hover */
 .credits-part p .credit-link {
 	margin-left: 1em;
 	color: var(--albescentwhite);
@@ -194,12 +198,14 @@ body {
 	color: var(--aquamarine);
 }
 
-/* styles for the cards */
+/* cards */
 .part .card-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
+/* card content */
+/* gradient background */
 .part .card-container article {
 	flex-basis: 30%;
 	text-align: center;
@@ -218,6 +224,7 @@ body {
 	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 1);
 	transition: 0.4s;
 }
+/* card links and hover */
 .part .card-container article:hover {
 	box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 1);
 }
@@ -227,14 +234,17 @@ body {
 .part .card-container article .card-link a:hover {
 	color: var(--aquamarine);
 }
+/* card image */
 .part .card-container article img {
 	max-width: 100%;
 	height: auto;
 	margin-bottom: 1em;
 }
+/* card heading */
 .part .card-container article .card-link {
 	font-size: 1.5rem;
 }
+/* card description */
 .part .card-container article p {
 	color: var(--albescentwhite);
 	padding: 1em;
@@ -287,6 +297,7 @@ body {
 	.navmenu .hamburger {
 		display: block;
 		cursor: pointer;
+		padding: 0.75em 0;
 	}
 	/* hamburger X animation */
 	.navmenu .hamburger.active .bar:nth-child(2) {
@@ -305,7 +316,7 @@ body {
 		padding: 0 1em;
 		font-size: 1.5rem;
 	}
-
+	/* part */
 	/* things to do | restaurants | lodging */
 	.part {
 		padding: 2em 0;
@@ -320,7 +331,8 @@ body {
 		margin: 0 2em 2em 2em;
 	}
 
-	/* styles for the cards */
+	/* cards */
+	/* card content */
 	.part .card-container article {
 		flex-basis: 40%;
 	}
@@ -337,6 +349,7 @@ body {
 /* Mobile styles */
 /* max-width 425px */
 @media screen and (max-width: 425px) {
+	/* part */
 	/* things to do | restaurants | lodging */
 	.part h2 {
 		font-size: 1.75rem;
@@ -346,11 +359,6 @@ body {
 		margin: 0 1.25em 1.5em 1.25em;
 	}
 
-	/* styles for the cards */
-	.part .card-container article {
-		flex-basis: 80%;
-	}
-
 	/* credits */
 	.credits-part h2,
 	h3 {
@@ -358,5 +366,11 @@ body {
 	}
 	.credits-part p .credit-link {
 		margin-left: initial;
+	}
+
+	/* cards */
+	/* card content */
+	.part .card-container article {
+		flex-basis: 80%;
 	}
 }
