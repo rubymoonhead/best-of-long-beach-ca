@@ -1,4 +1,4 @@
-# lab-activity-5-flexBox-page-layout-with-navigation
+# best-of-long-beach-ca
 
 Create a FlexBox Page Layout with Navigation
 
