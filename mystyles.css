@@ -166,7 +166,7 @@ h1 {
 }
 .part .part-desc {
 	font-size: 1.25rem;
-	line-height: 1.6;
+	line-height: 1.5;
 	margin: 0 3em 2em 3em;
 	text-align: justify;
 }
@@ -184,7 +184,7 @@ h1 {
 /* credits */
 .credits-part {
 	padding: 1em;
-	line-height: 1.6;
+	line-height: 1.5;
 }
 .credits-part p {
 	font-family: "Varela Round", sans-serif;
@@ -260,9 +260,35 @@ h1 {
 	background-color: var(--rock);
 }
 
+/* Laptop styles */
+/* max-width 64em (1024px) */
+@media (max-width: 64em) {
+	/* body */
+	body {
+		max-width: 100%;
+	}
+
+	/* fixed navigation bar */
+	.navmenu {
+		max-width: 100%;
+	}
+
+	/* the main part */
+	/* Home */
+	.page .text {
+		padding: 0 1.5em;
+	}
+
+	/* part */
+	/* things to do | restaurants | lodging */
+	.part h2 {
+		font-size: 2rem;
+	}
+}
+
 /* Tablet styles */
-/* max-width 768px */
-@media screen and (max-width: 768px) {
+/* max-width 48em (768px) */
+@media (max-width: 48em) {
 	/* body */
 	body {
 		max-width: none;
@@ -347,8 +373,8 @@ h1 {
 }
 
 /* Mobile styles */
-/* max-width 425px */
-@media screen and (max-width: 425px) {
+/* max-width 26.5em (425px) */
+@media (max-width: 26.5em) {
 	/* part */
 	/* things to do | restaurants | lodging */
 	.part h2 {
