@@ -121,6 +121,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+	padding-top: 3em;
 }
 .page .text {
 	padding: 0 2em;
